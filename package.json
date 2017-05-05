@@ -2,8 +2,10 @@
   "name": "projeto-teste",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "main.ts",
   "scripts": {
+	"heroku-prebuild": "npm install -g http-server",
+  "heroku-postbuild": "ng build --prod",
+  "start": "http-server dist/",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
